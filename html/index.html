@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href = "./../style/turismo.css" >
+    <title> 5 Lugares que podem mudar sua visão sobre o Mundo </title>
+</head>
+
+<body>
+ 
+  <section>
+   <br> 
+
+   <a name = "inicio1"> </a>
+   
+   <nav> 
+     <ul>
+       <li><a href="index.html"> Inicio </a></li>
+       <li><a href="destinos.html"> Conheça mais 5 destinos </a></li>
+       <li><a href="sobre.html"> Sobre </a></li>
+     </ul>
+   </nav> 
+
+   <h1> Venha conhecer lugares incríveis nesta página de turismo!  </h1>
+   
+   <h2 class = "subtitulo"> Bem vindo(a)! <h2>
+   <h2 class = "subtitulo"> Welcome! </h2>
+   <h2 class = "subtitulo"> добро пожаловать! </h2>
+   <h2 class = "subtitulo"> Bienvenido! </h2>
+   <h2 class = "subtitulo"> Bienvenue! </h2>
+   <h2 class = "subtitulo"> Benvenuto! </h2>
+
+  <div> 
+    <img src="./../html/imgs/viagem.jpg" id="picture" height="350" width="600">
+  </div> 
+
+  <h3> Digite um país no buscador abaixo para ver alguns dos lugares chamativos desse país </h3>
+  <h3> Observação: não se preocupe em pôr letras maísculas para os países </h3>
+  
+    <input id = "pesquisa" placeholder= "pesquise aqui"> 
+     <ul id = "lista"> </ul>
+     <script>
+        lugares = ["México, Península de lucatã, Chichén Itza", "Roma, Coliseu", "China, Pequim, Grande Muralha da China",  "Espanha, Plaza de España", "França, Paris, Torre Eiffel", "Estados Unidos, Ponte Golden Bate", "França, Paris, Catedral de Notre Dame", "Brasil, Rio de Janeiro, Cristo Redentor", "Hungria, Parlamento de Budapeste", "Maldivas, Ilha Meeru", "EUA, Hollywood, Los Angeles,", "EUA, New York", "Itália, Cittá di Pompei- Nápoles", "Itália, Villa Romana del Casale- Sicilia", "França, Museu do Louvre- Paris", "Espanha, Parque do Retiro - Madrid", "Indonésia, Borobudur", "Espanha, Cidade das Artes e das Ciências - Valência", "China, Cidade Proibida- Beijing", "Brasil, Pelourinho- Salvador, Bahia", "Hungria, Cavernas do Parque Nacional de Aggtelek", "México, Ruínas Teotihuacán", "Portugal, Praia Dona Ana", "Portugal, A Cidadela de Cascais", "Coreia do Sul, Namsan Seoul Tower (Seul)", "Japão, Castelo de Himeji (Hyogo)", "Coreia do Sul, cidade de Busan, distrito de Haeundae", "Japão, Okinawa", "Noruega, Nordkapp", "Noruega, Centro de Bergen", "Suíça, Basileia", "Suíça, Lucerna", "Vaticano, Basílica de São Pedro - Cidade do Vaticano", "Dubai, EAU, Burj Khalifa", "Grécia, Atenas, Acrópole de Atenas","Tanzânia, Kilimanjaro", "Japão, Fushima Inari-taisha - Kyoto", "Rússia, São Petersburgo, Catedral do Sangue Derramado", "Turquia, Mesquita Azul - Istambul"];
+
+         t = ""
+         for(i in lugares){
+         t += "<li>" +lugares[i]+ "</li>"
+         lugares[i] = lugares[i].toLowerCase()
+         }
+
+          lista.innerHTML = t;
+
+          pesquisa.onkeyup = function(e){
+
+           t = this.value
+           r = new RegExp(t, "g")
+        
+           for(i in lugares){
+           if(lugares[i].match(r) )
+           lista.children[i].removeAttribute("style")
+           else
+           lista.children[i].style.display = "none"
+        }
+      } 
+
+    </script>
+
+         <br>
+         <br>
+          <h3> Você sabe o que realmente significa Turismo? </h3>
+          <div> 
+            <img id = "pic2" src = "./../html/imgs/turismo.webp" alt = "turismo">
+          </div>
+          <p> O turismo pode ser visto como uma forma de arte caracterizada pelas viagens de pessoas para outros locais diferentes do seu ambiente natural com as atividades que elas realizam ao chegarem em seu destino, além dos custos e despesas. O turismo, enquanto atividade econômica, integra o setor terciário, e vinha apresentando um crescimento expressivo em todo o mundo até o ano de 2019. A Europa e a Ásia são os continentes mais visitados. No Brasil, o Rio de Janeiro é o principal destino. Com a pandemia da covid-19, que se instalou a partir de 2020, o setor foi um dos mais impactados. Contudo, vem se notando um desejo esperado da população de conhecer novos lugares e perspectivas, por essa razão e muitas outras, vale a pena tomar ciência de novas paisagens. Se for de seu desejo, obtenha informação sobre cinco pontos turísticos clicando no botão:  </p>
+
+        <br>
+
+       <a class = "lk" href = "#inicio1"> voltar ao início </a>
+       <br>
+       <br>
+
+      </section>
+      <br>
+
+</body>
+</html>
